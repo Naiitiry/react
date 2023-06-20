@@ -1,0 +1,16 @@
+{
+  "name": "clasenode",
+  "version": "1.0.0",
+  "description": "esta es la primer clase",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "servidor",
+    "node"
+  ],
+  "author": "Roman",
+  "license": "ISC"
+}
