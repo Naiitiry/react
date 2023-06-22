@@ -11,7 +11,7 @@ lo que hay en la tabla como ID, fecha de creación y actualización
 se actualizan automaticamente, no es necesario cargarlo para rellenar.
 */
 
-const PostModel = db.define("blog",{
+const PostModel = db.define("post",{
     title:{type:DataTypes.STRING},
     content:{type:DataTypes.STRING}
 })

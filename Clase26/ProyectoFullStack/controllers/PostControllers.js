@@ -32,7 +32,39 @@ export const getPost = async(req,res)=>{
 // Crear 1 registro. CREATE
 export const createPost = async(req,res)=>{
     try {
-        await PostModel.create( )
+        await PostModel.create(req.body)
+        res.json({
+            "message": "Registro creado correctamente."
+        })
+    } catch (error) {
+        res.json({message:error.message})
+    }
+}
+
+// Actualizo un post. UPDATE
+export const updatePost = async(req,res)=>{
+    try {
+    await PostModel.update(req.body,{
+        where:{id:req.params.id}
+    })
+    res.json({
+        "message": "Registro editado correctamente."
+    })
+    } catch (error) {
+        res.json({message:error.message})
+    }
+}
+
+// Eliminar registro. DELETE
+
+export const deletePost = async (req,res)=>{
+    try {
+        await PostModel.destroy({
+            where:{id:req.params.id}
+        })
+        res.json({
+            "message": "Registro eliminado correctamente."
+        })
     } catch (error) {
         res.json({message:error.message})
     }
