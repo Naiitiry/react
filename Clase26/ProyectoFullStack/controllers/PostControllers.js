@@ -34,13 +34,18 @@ export const createPost = async(req,res)=>{
     try {
         await PostModel.create(req.body)
         res.json({
+<<<<<<< HEAD
             "message": "Registro creado correctamente."
+=======
+            "message": "Registro creado correctamente"
+>>>>>>> 3bbef2d181b2fd1463815348e61e1f4731ab6675
         })
     } catch (error) {
         res.json({message:error.message})
     }
 }
 
+<<<<<<< HEAD
 // Actualizo un post. UPDATE
 export const updatePost = async(req,res)=>{
     try {
@@ -50,12 +55,25 @@ export const updatePost = async(req,res)=>{
     res.json({
         "message": "Registro editado correctamente."
     })
+=======
+// Actualizar registro. UPDATE
+
+export const updatePost = async(req,res)=>{
+    try {
+        await PostModel.update(req.body,{
+            where:{id:req.params.id}
+        })
+>>>>>>> 3bbef2d181b2fd1463815348e61e1f4731ab6675
     } catch (error) {
         res.json({message:error.message})
     }
 }
 
+<<<<<<< HEAD
 // Eliminar registro. DELETE
+=======
+// Eliminar Registro. DELETE
+>>>>>>> 3bbef2d181b2fd1463815348e61e1f4731ab6675
 
 export const deletePost = async (req,res)=>{
     try {
@@ -63,7 +81,11 @@ export const deletePost = async (req,res)=>{
             where:{id:req.params.id}
         })
         res.json({
+<<<<<<< HEAD
             "message": "Registro eliminado correctamente."
+=======
+            "message": "Registro eliminado correctamente"
+>>>>>>> 3bbef2d181b2fd1463815348e61e1f4731ab6675
         })
     } catch (error) {
         res.json({message:error.message})
