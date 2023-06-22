@@ -7,3 +7,5 @@ Ingresar a la carpeta del proyecto "cd nombredelacarpeta".
 Una vez dentro ponemos "npm i" para instalar los módulos de React.
 y para que funcione ponemos "npm run dev".
 
+npm i axios bootstrap react-router-dom
+
