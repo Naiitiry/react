@@ -22,6 +22,7 @@ const ShowPost = () => {
 
     const deletePost = async(id)=>{
         await axios.delete(`${url}${id}`)
+        getPosts(res.data) //borra y trae todos los posts de vuelta y actualiza la página.
     }
 
     return(
@@ -45,6 +46,7 @@ const ShowPost = () => {
                                     <td>{post.content}</td>
                                     <td>
                                         <Link to={`/edit/${post.id}`} className="btn btn-info"><i className="fas fa-edit"></i></Link>
+                                        <button onClick={()=>deletePost(post.id)} className="btn btn-danger"><i className="fas fa-trash"></i></button>
                                     </td>
                                 </tr>
                             })}
